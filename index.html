@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./scroll.css">
+    <script src="app.js"></script>
+    <title>Clicker</title>
+</head>
+<body>
+    
+    <div class="container mx-auto h-screen">
+        <div class="py-20">
+            <h1 class="text-center text-4xl font-bold">Super clicker for geniuses</h1>
+        </div>
+        <div class="flex items-center justify-center">
+            <div class="w-1/2 items-center justify-center flex flex-col">
+                <button class="mb-10"onclick="clickplus()" ><img src="./pngegg.png"  alt="" width="300px"></button>
+                <h1 class="text-center text-xl font-bold" id="cashPS">+ 1 /сек</h1>
+                <h1 class="text-center text-3xl font-bold" id="cash">0</h1>
+            </div>
+            <div class="bg-slate-100 w-1/2 px-6">
+                <h1 class="text-center text-3xl font-bold mb-10 p-4">Магазин</h1>
+
+                <div id="store" class="overflow-auto h-[450px] px-2 mb-6">
+
+                    <div class="bg-slate-200 flex items-center w-full justify-around rounded-lg gap-6 mb-10">
+                        <img src="./pngegg (1).png" alt="" width="120px" class="p-2">
+                        <div class="flex items-center justify-center">
+                            <h1 class="">Айкос с кошачьей ссаниной</h1>
+                            <div class="bg-green-200 h-[115px] flex items-center justify-center w-[290px] flex-col">
+                                <h1 class="font-bold text-red-400">Цена: 10 </h1>
+                                <h2 class="font-bold text-red-400" id="upp1">+ 1/сек <br> У вас 0</h2>  <!-- max 100 --> 
+                            </div>
+                            <button class="bg-green-400 py-2 px-10 text-center text-xl font-semibold h-[115px]" onclick="plusUpp1()">Купить улучшение</button>
+                        </div>
+                    </div>
+    
+                    <div class="bg-slate-200 flex items-center w-full justify-around rounded-lg gap-6 mb-10">
+                        <img src="./pngegg (1).png" alt="" width="120px" class="p-2">
+                        <div class="flex items-center justify-center">
+                            <h1 class="">Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты.</h1>
+                            <div class="bg-green-200 h-[115px] flex items-center justify-center w-[290px] flex-col">
+                                <h1 class="font-bold text-red-400">Цена: 100 </h1>
+                                <h2 class="font-bold text-red-400" id="upp2">+ 15/сек <br> У вас 0</h2>  <!-- max 50 --> 
+                            </div>
+                            <button class="bg-green-400 py-2 px-10 text-center text-xl font-semibold h-[115px]" onclick="plusUpp2()">Купить улучшение</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-200 flex items-center w-full justify-around rounded-lg gap-6 mb-10">
+                        <img src="./pngegg (1).png" alt="" width="120px" class="p-2">
+                        <div class="flex items-center justify-center">
+                            <h1 class="">Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты.</h1>
+                            <div class="bg-green-200 h-[115px] flex items-center justify-center w-[290px] flex-col">
+                                <h1 class="font-bold text-red-400">Цена: 1000 </h1>
+                                <h2 class="font-bold text-red-400" id="upp3">+ 55/сек <br> У вас 0</h2>  <!-- max 30 --> 
+                            </div>
+                            <button class="bg-green-400 py-2 px-10 text-center text-xl font-semibold h-[115px]" onclick="plusUpp3()">Купить улучшение</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-200 flex items-center w-full justify-around rounded-lg gap-6 mb-10">
+                        <img src="./pngegg (1).png" alt="" width="120px" class="p-2">
+                        <div class="flex items-center justify-center">
+                            <h1 class="">Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты.</h1>
+                            <div class="bg-green-200 h-[115px] flex items-center justify-center w-[290px] flex-col">
+                                <h1 class="font-bold text-red-400">Цена: 10.000 </h1>
+                                <h2 class="font-bold text-red-400" id="upp4">+ 220/сек <br> У вас 0</h2>  <!-- max 25 --> 
+                            </div>
+                            <button class="bg-green-400 py-2 px-10 text-center text-xl font-semibold h-[115px]" onclick="plusUpp4()">Купить улучшение</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-200 flex items-center w-full justify-around rounded-lg gap-6 mb-10">
+                        <img src="./pngegg (1).png" alt="" width="120px" class="p-2">
+                        <div class="flex items-center justify-center">
+                            <h1 class="">Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты.</h1>
+                            <div class="bg-green-200 h-[115px] flex items-center justify-center w-[290px] flex-col">
+                                <h1 class="font-bold text-red-400">Цена: 100к</h1>
+                                <h2 class="font-bold text-red-400" id="upp5">+ 1240/сек <br> У вас 0</h2>  <!-- max 15 --> 
+                            </div>
+                            <button class="bg-green-400 py-2 px-10 text-center text-xl font-semibold h-[115px]" onclick="plusUpp5()">Купить улучшение</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-200 flex items-center w-full justify-around rounded-lg gap-6 mb-10">
+                        <img src="./pngegg (1).png" alt="" width="120px" class="p-2">
+                        <div class="flex items-center justify-center">
+                            <h1 class="">Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты.</h1>
+                            <div class="bg-green-200 h-[115px] flex items-center justify-center w-[290px] flex-col">
+                                <h1 class="font-bold text-red-400">Цена: 1м</h1>
+                                <h2 class="font-bold text-red-400" id="upp6">+ 9.7к/сек <br> У вас 0</h2>
+                            </div>
+                            <button class="bg-green-400 py-2 px-10 text-center text-xl font-semibold h-[115px]" onclick="plusUpp6()">Купить улучшение</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

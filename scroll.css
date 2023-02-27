@@ -1,0 +1,10 @@
+#store::-webkit-scrollbar {
+    width: 8px; 
+  }
+ #store::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255); 
+  }
+#store::-webkit-scrollbar-thumb {
+    background-color: rgb(179, 198, 248);     
+    border-radius: 20px;      
+  }
