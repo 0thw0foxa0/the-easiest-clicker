@@ -118,16 +118,17 @@ function plusUpp6(){
     }
 }
 
-let firstValue=1;
+let firstValue=0;
 let i = 1;
-let interval = setInterval( increment, 1000);
+let interval = setInterval( increment, 100);
 
 function increment(){
-    i += firstValue;
+   
+    i +=  firstValue/10;
     console.log(i);
-    document.getElementById('cash').innerHTML=i;
+    document.getElementById('cash').innerHTML=Number((i).toFixed(1));
     document.getElementById('cashPS').innerHTML="+ "+firstValue+" /сек";
-if(firstValue==123601)
+if(firstValue==123600)
 {
     alert('Ну и нахуй ты игру прошел, че делать теперь? ну радуйся хули')
     firstValue=999999;
