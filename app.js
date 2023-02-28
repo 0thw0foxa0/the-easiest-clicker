@@ -12,7 +12,7 @@ function fullUpp(){
 }
 
 function clickplus(){
-    document.getElementById('cash').innerHTML=i++;
+       document.getElementById('cash').innerHTML=Number((i++).toFixed(1));
 }
 
 function plusUpp1(){
