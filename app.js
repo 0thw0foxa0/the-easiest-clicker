@@ -1,7 +1,6 @@
 const cash=document.getElementById('cash')
 const cashPS=document.getElementById('cashPS')
 const upp1=document.getElementById('upp1')
-
 let firstValue=0;
 let i = 1;
 let interval = setInterval( increment, 100);
@@ -32,7 +31,8 @@ let arrCashPSsum=
     0,
     0,
 
-]
+];
+
 let arrCount=[0,0,0,0,0,0];
 // подгрузка и выгрузка 
 if(localStorage.getItem('i')!= null){
@@ -41,30 +41,25 @@ if(localStorage.getItem('i')!= null){
 let tmp=0;
 for(m=0; m<6; m++)
 { 
-   arrCashPS[m]=+localStorage.getItem(`arrCashPS${m}`)
+   arrCashPS[m]=+localStorage.getItem(`arrCashPS${m}`);
 }
 
 for(m=0; m<6; m++)
 { 
-   arrCashPSsum[m]=+localStorage.getItem(`arrCashPSsum${m}`)
+   arrCashPSsum[m]=+localStorage.getItem(`arrCashPSsum${m}`);
 }
 
 for(m=0; m<6; m++)
 { 
-   arrCount[m]=+localStorage.getItem(`arrCount${m}`)  
+   arrCount[m]=+localStorage.getItem(`arrCount${m}`)  ;
 }
 
 for(m=0; m<6; m++)
 { 
-   arrCost[m]=+localStorage.getItem(`arrCost${m}`)
+   arrCost[m]=+localStorage.getItem(`arrCost${m}`);
    
 }
-
-
-
     }
-
-
     window.onbeforeunload = function() {                
 	localStorage.setItem('i', i);
     localStorage.setItem('firstValue', firstValue);
@@ -94,8 +89,6 @@ for(m=0; m<6; m++)
     }
 };
 //
-
-
 function digit(numUpp)
 {
     if(arrCost[numUpp]>=1000 && arrCost[numUpp]<1000000)
@@ -112,9 +105,6 @@ function digit(numUpp)
     
 }
 
-
-
-
 function notEnoughtMoney()
 {
     console.log('not enought money for uppgrade');
@@ -122,7 +112,7 @@ function notEnoughtMoney()
 
 function fullUpp()
 {
-    console.log('you have bought all the upgrades of this type')
+    console.log('you have bought all the upgrades of this type');
 }
 
 function clickplus()
@@ -153,16 +143,11 @@ function plusUpp(numUpp)
         firstValue+=arrCashPS[numUpp];
         arrCost[numUpp]+=arrCost[numUpp]/5;
        arrCount[numUpp]++;
-    console.log('costUpp'+numUpp)
-    arrCashPSsum[numUpp]+=arrCashPS[numUpp]
+    console.log('costUpp '+numUpp); 
+    arrCashPSsum[numUpp]+=arrCashPS[numUpp];
     document.getElementById('upp' +numUpp).innerHTML="+ "+arrCashPSsum[numUpp]+" в сек"  +"<br> у вас "+ arrCount[numUpp]; 
    digit(numUpp);
-}
-    
-}
-
-
-
+}}
 function increment(){
    
     i +=  firstValue/10;
@@ -175,12 +160,9 @@ function increment(){
     }
     
 
-if(firstValue==123600)
+if(firstValue==561535)
 {
-    alert('Ну и нахуй ты игру прошел, че делать теперь? ну радуйся хули')
+    alert('Ну и нахуй ты игру прошел, че делать теперь? ну радуйся хули');
     firstValue=999999;
 }
 }
-
-
-
